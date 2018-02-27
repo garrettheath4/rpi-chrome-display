@@ -31,7 +31,7 @@ Instructions
 1. Reboot the system (into Desktop GUI) using `sudo reboot`
 1. Application Menu > Preferences > Raspberry Pi Configuration
     * Check _Login as user 'pi'_
-    * Set resolution to 720p or 1080p
+    * Set resolution to 720p or 1080p (CEA mode, for TVs)
 1. Clone this repository to the home directory of the `pi` user:
 
         git clone https://github.com/garrettheath4/rpi-chrome-display.git
