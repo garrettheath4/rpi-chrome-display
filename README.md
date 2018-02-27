@@ -27,6 +27,7 @@ Instructions
             * Use Control+Alt+Backspace to terminate the X server: _No_
     * Interfacing Options: Enable SSH (if desired)
     * Advanced: Expand Filesystem
+1. Install `xdotools` by running `sudo apt-get install xdotools`
 1. Reboot the system (into Desktop GUI) using `sudo reboot`
 1. Application Menu > Preferences > Raspberry Pi Configuration
     * Check _Login as user 'pi'_
