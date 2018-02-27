@@ -37,7 +37,7 @@ Instructions
 
 1. Edit `~/.config/lxsession/LXDE-pi/autostart` file
     * Comment out `@xscreensaver -no-splash` line by prepending it with `#`
-    * Add the following lines:
+    * Add the following lines (replace `https://www.haystack.tv` with your own desired URL; see `autostart` file in repo for full example file):
 
             @xset s off
             @xset -dpms
