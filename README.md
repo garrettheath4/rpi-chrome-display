@@ -46,6 +46,8 @@ Instructions
             @chromium-browser --noerrdialogs --kiosk https://www.haystack.tv/
             @/home/pi/rpi-chrome-display/autorefresh-chromium.sh
 
+1. Reboot the system using `sudo reboot` to make sure it works
+
 
 Sources
 -------
