@@ -8,8 +8,8 @@ Raspberry Pi boot up to a full-screen web page in the Chromium web browser.
 Instructions
 ------------
 
-0. Install Raspbian on your Raspberry Pi
-0. Use `sudo raspi-config` command to configure the system:
+1. Install Raspbian on your Raspberry Pi
+1. Use `sudo raspi-config` command to configure the system:
     * Update to make sure you have the latest script
     * Set new password for default `pi` user
     * Network
@@ -27,15 +27,15 @@ Instructions
             * Use Control+Alt+Backspace to terminate the X server: _No_
     * Interfacing Options: Enable SSH (if desired)
     * Advanced: Expand Filesystem
-0. Reboot the system (into Desktop GUI) using `sudo reboot`
-0. Application Menu > Preferences > Raspberry Pi Configuration
+1. Reboot the system (into Desktop GUI) using `sudo reboot`
+1. Application Menu > Preferences > Raspberry Pi Configuration
     * Check _Login as user 'pi'_
     * Set resolution to 720p or 1080p
-0. Clone this repository to the home directory of the `pi` user:
+1. Clone this repository to the home directory of the `pi` user:
 
         git clone https://github.com/garrettheath4/rpi-chrome-display.git
 
-0. Edit `~/.config/lxsession/LXDE-pi/autostart` file
+1. Edit `~/.config/lxsession/LXDE-pi/autostart` file
     * Comment out `@xscreensaver -no-splash` line by prepending it with `#`
     * Add the following lines:
 
