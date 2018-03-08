@@ -27,7 +27,7 @@ Instructions
             * Use Control+Alt+Backspace to terminate the X server: _No_
     * Interfacing Options: Enable SSH (if desired)
     * Advanced: Expand Filesystem
-1. Install `xdotools` by running `sudo apt-get install xdotools`
+1. Install `xdotool` by running `sudo apt-get install xdotool`
 1. Reboot the system (into Desktop GUI) using `sudo reboot`
 1. Application Menu > Preferences > Raspberry Pi Configuration
     * Check _Login as user 'pi'_
@@ -48,6 +48,7 @@ Instructions
             @/home/pi/rpi-chrome-display/autorefresh-chromium.sh
             @/home/pi/rpi-chrome-display/haystack-fullscreen.sh
 
+1. In Chromium, go to Menu > More Tools > [Extensions](chrome://extensions/) and check _Allow in incognito_ next to the [h264ify] and [uBlock Origin] extensions.
 1. Reboot the system using `sudo reboot` to make sure it works
 
 
@@ -59,5 +60,7 @@ Sources
 
 
 <!-- Links -->
+[h264ify]: https://chrome.google.com/webstore/detail/h264ify/aleakchihdccplidncghkekgioiakgal
+[uBlock Origin]: https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
 [tutorial]: https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/
 [script]: https://www.raspberrypi.org/forums/viewtopic.php?t=178206
