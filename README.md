@@ -49,6 +49,11 @@ Instructions
             @/home/pi/rpi-chrome-display/haystack-fullscreen.sh
 
 1. In Chromium, go to Menu > More Tools > [Extensions](chrome://extensions/) and check _Allow in incognito_ next to the [h264ify] and [uBlock Origin] extensions.
+1. In Chromium, click on the _uBlock Origin_ extension icon (to the right of the address bar), click the _Open the dashboard_ button (in the uBlock Origin pop-up menu), go to the _My Filters_ tab, add the following lines to the text box, and click the _Apply changes_ button:
+
+        ! Hide the signup banner at the bottom of the page on https://www.haystack.tv/
+        www.haystack.tv###signup-intro
+
 1. Reboot the system using `sudo reboot` to make sure it works
 
 
