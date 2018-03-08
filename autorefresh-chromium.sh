@@ -9,7 +9,7 @@ export DISPLAY=:0.0
 while true; do
 	# sleep arg is in seconds, so 12 hours = 43200 seconds
 	sleep 43200
-	xdotool key 'ctrl+F5'
+	xdotool key 'F5'
 	if [ -x $fullscreen_script ]; then
 		$fullscreen_script
 	else

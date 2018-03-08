@@ -6,10 +6,12 @@
 export DISPLAY=:0.0
 
 # Wait for the Haystack.tv page to load
-sleep 30
+sleep 45
 
 # Move mouse somewhere into video on page
 xdotool mousemove --sync 300 300
+
+sleep 2
 
 # Double-click video to make it fullscreen
 xdotool click --repeat 2 1
