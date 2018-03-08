@@ -8,10 +8,8 @@ export DISPLAY=:0.0
 # Wait for the Haystack.tv page to load
 sleep 30
 
-# Press Tab key 28 times to select Fullscreen button in video player
-for i in {1..28}; do
-	xdotool key 'Tab'
-done
+# Move mouse somewhere into video on page
+xdotool mousemove --sync 300 300
 
-# Press space to activate the Fullscreen button
-xdotool key 'space'
+# Double-click video to make it fullscreen
+xdotool click --repeat 2 1
