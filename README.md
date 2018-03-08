@@ -14,7 +14,7 @@ Instructions
     * Set new password for default `pi` user
     * Network
         * Set hostname
-        * Auto-connect to Wi-Fi network (not using wired ethernet)
+        * Auto-connect to Wi-Fi network (if not using wired ethernet)
     * Boot to Desktop GUI
     * Localisation
         * Set locale to `en_US.UTF-8 UTF-8`
@@ -46,6 +46,7 @@ Instructions
             @sed -i 's/"exited_cleanly": false/"exited_cleanly": true/' ~/.config/chromium/Default/Preferences
             @chromium-browser --noerrdialogs --kiosk https://www.haystack.tv/
             @/home/pi/rpi-chrome-display/autorefresh-chromium.sh
+            @/home/pi/rpi-chrome-display/haystack-fullscreen.sh
 
 1. Reboot the system using `sudo reboot` to make sure it works
 
