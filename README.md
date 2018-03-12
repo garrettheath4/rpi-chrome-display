@@ -27,7 +27,6 @@ Instructions
             * Use Control+Alt+Backspace to terminate the X server: _No_
     * Interfacing Options: Enable SSH (if desired)
     * Advanced: Expand Filesystem
-1. Install `xdotool` by running `sudo apt-get install xdotool`
 1. Reboot the system (into Desktop GUI) using `sudo reboot`
 1. Application Menu > Preferences > Raspberry Pi Configuration
     * Check _Login as user 'pi'_
@@ -36,24 +35,19 @@ Instructions
 
         git clone https://github.com/garrettheath4/rpi-chrome-display.git
 
-1. Edit `~/.config/lxsession/LXDE-pi/autostart` file
-    * Comment out `@xscreensaver -no-splash` line by prepending it with `#`
-    * Add the following lines (replace `https://www.haystack.tv` with your own desired URL; see `autostart` file in repo for full example file):
+1. Run this project's install script
 
-            @xset s off
-            @xset -dpms
-            @xset s noblank
-            @sed -i 's/"exited_cleanly": false/"exited_cleanly": true/' ~/.config/chromium/Default/Preferences
-            @chromium-browser --noerrdialogs --kiosk https://www.haystack.tv/
-            @/home/pi/rpi-chrome-display/autorefresh-chromium.sh
-            @/home/pi/rpi-chrome-display/haystack-fullscreen.sh
+        cd rpi-chrome-display
+        ./install.sh
 
-1. In Chromium, go to Menu > More Tools > [Extensions](chrome://extensions/) and check _Allow in incognito_ next to the [h264ify] and [uBlock Origin] extensions.
 1. In Chromium, click on the _uBlock Origin_ extension icon (to the right of the address bar), click the _Open the dashboard_ button (in the uBlock Origin pop-up menu), go to the _My Filters_ tab, add the following lines to the text box, and click the _Apply changes_ button:
 
         ! Hide the signup banner at the bottom of the page on https://www.haystack.tv/
         www.haystack.tv###signup-intro
 
+1. Install the [Tampermonkey] extension for Chromium
+1. Go to [this URL][HaystackFullVideo] in Chromium to install the _Haystack Full Video_ user script
+1. In Chromium, go to Menu > More Tools > [Extensions](chrome://extensions/) and check _Allow in incognito_ next to the [h264ify], [uBlock Origin], and [Tampermonkey] extensions.
 1. Reboot the system using `sudo reboot` to make sure it works
 
 
@@ -69,3 +63,5 @@ Sources
 [uBlock Origin]: https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
 [tutorial]: https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/
 [script]: https://www.raspberrypi.org/forums/viewtopic.php?t=178206
+[Tampermonkey]: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
+[HaystackFullVideo]: https://gist.github.com/garrettheath4/b048bfb9cac5099b9217bfa04d71df10/raw/HaystackFullVideo.user.js
