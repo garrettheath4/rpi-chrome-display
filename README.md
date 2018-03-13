@@ -48,6 +48,7 @@ Instructions
 1. Install the [Tampermonkey] extension for Chromium
 1. Go to [this URL][HaystackFullVideo] in Chromium to install the _Haystack Full Video_ user script
 1. In Chromium, go to Menu > More Tools > [Extensions](chrome://extensions/) and check _Allow in incognito_ next to the [h264ify], [uBlock Origin], and [Tampermonkey] extensions.
+1. _Optional:_ Connect the Raspberry Pi to the screen where it will be playing the videos (e.g. digital display, TV, or monitor) and use the [`set_overscan`][setoverscan] project on GitHub to set the HDMI [overscan].
 1. Reboot the system using `sudo reboot` to make sure it works
 
 
@@ -65,3 +66,5 @@ Sources
 [script]: https://www.raspberrypi.org/forums/viewtopic.php?t=178206
 [Tampermonkey]: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
 [HaystackFullVideo]: https://gist.github.com/garrettheath4/b048bfb9cac5099b9217bfa04d71df10/raw/HaystackFullVideo.user.js
+[setoverscan]: https://github.com/ukscone/set_overscan
+[overscan]: https://en.wikipedia.org/wiki/Overscan
