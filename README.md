@@ -49,6 +49,8 @@ Instructions
 1. Go to [this URL][HaystackFullVideo] in Chromium to install the _Haystack Full Video_ user script
 1. In Chromium, go to Menu > More Tools > [Extensions](chrome://extensions/) and check _Allow in incognito_ next to the [h264ify], [uBlock Origin], and [Tampermonkey] extensions.
 1. _Optional:_ Connect the Raspberry Pi to the screen where it will be playing the videos (e.g. digital display, TV, or monitor) and use the [set\_overscan] project on GitHub to set the HDMI [overscan].
+1. _Optional:_ Uninstall "bloatware" software that you don't need (it takes up space and slows down updates). See [this project][bloat] for examples of software to remove after a standard Raspian installation.
+1. _Optional:_ Read [this article][unattended] to install and configure _unattended-upgrades_
 1. Reboot the system using `sudo reboot` to make sure it works
 
 
@@ -59,12 +61,15 @@ Sources
 * [Chromium Auto Refresh][script] script
 
 
+
 <!-- Links -->
-[h264ify]: https://chrome.google.com/webstore/detail/h264ify/aleakchihdccplidncghkekgioiakgal
-[uBlock Origin]: https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
-[tutorial]: https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/
-[script]: https://www.raspberrypi.org/forums/viewtopic.php?t=178206
 [Tampermonkey]: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
 [HaystackFullVideo]: https://gist.github.com/garrettheath4/b048bfb9cac5099b9217bfa04d71df10/raw/HaystackFullVideo.user.js
+[h264ify]: https://chrome.google.com/webstore/detail/h264ify/aleakchihdccplidncghkekgioiakgal
+[uBlock Origin]: https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
 [set\_overscan]: https://github.com/ukscone/set_overscan
 [overscan]: https://en.wikipedia.org/wiki/Overscan
+[bloat]: https://github.com/raspberrycoulis/remove-bloat
+[unattended]: https://blog.dantup.com/2016/04/setting-up-automatic-updates-on-raspberry-pi-raspbian-jessie/
+[tutorial]: https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/
+[script]: https://www.raspberrypi.org/forums/viewtopic.php?t=178206
