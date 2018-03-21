@@ -2,23 +2,20 @@
 # Run this script to install rpi-chrome-display to this computer (Raspberry Pi)
 # See README.md file in rpi-chrome-display project for more instructions
 
-# Make sure xdotool is installed
+echo 'Installing xdotool (if not already installed)...'
 sudo apt-get update && sudo apt-get install xdotool
 
-# Make this project's autostart file the system's autostart script
-if [ ! -L ~/.config/lxsession/LXDE-pi/autostart ]; then
-	if [ -e ~/.config/lxsession/LXDE-pi/autostart ]; then
-		mv ~/.config/lxsession/LXDE-pi/autostart ~/.config/lxsession/LXDE-pi/autostart.bak
-	fi
-	if [ ! -e ~/.config/lxsession/LXDE-pi/autostart ]; then
-		ln -s "$(pwd)/autostart" ~/.config/lxsession/LXDE-pi/autostart
-	else
-		echo 'ERROR: ~/.config/lxsession/LXDE-pi/autostart still exists. Rename it and re-run this script. Exiting.'
-		exit 1
-	fi
+# Make sure this project's autostart snippet is in the user's autostart file
+if grep -F 'chromium' ~/.config/lxsession/LXDE-pi/autostart >/dev/null 2>&1; then
+	echo "Your ~/.config/lxsession/LXDE-pi/autostart file appears to already"
+	echo " contain instructions to start Chromium when you log in."
+	echo "Double-check your autostart file to make sure it contains everything"
+	echo " in this project's autostart.part file."
 else
-	echo "Warning: ~/.config/lxsession/LXDE-pi/autostart is already a link. File not relinked because it's probably already linked to this project's autostart file."
-	exit 0
+	echo 'Backing up ~/.config/lxsession/LXDE-pi/autostart file...'
+	cp ~/.config/lxsession/LXDE-pi/autostart ~/.config/lxsession/LXDE-pi/autostart.bak
+	echo 'Modifying ~/.config/lxsession/LXDE-pi/autostart file...'
+	cat autostart.part >> ~/.config/lxsession/LXDE-pi/autostart
 fi
 
 echo "Installed. Follow the other steps in this project's README file and then reboot the system."
