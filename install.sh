@@ -2,8 +2,8 @@
 # Run this script to install rpi-chrome-display to this computer (Raspberry Pi)
 # See README.md file in rpi-chrome-display project for more instructions
 
-echo 'Installing xdotool (if not already installed)...'
-sudo apt-get update && sudo apt-get install xdotool
+echo 'Installing xdotool and unclutter (if not already installed)...'
+sudo apt update && sudo apt install xdotool unclutter -y
 
 # Make sure this project's autostart snippet is in the user's autostart file
 if grep -F 'chromium' ~/.config/lxsession/LXDE-pi/autostart >/dev/null 2>&1; then
