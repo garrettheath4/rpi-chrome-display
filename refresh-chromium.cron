@@ -1,6 +1,6 @@
-# Refresh Chromium page every 10 minutes from 7 AM to 10 PM on weekdays
+# Refresh Chromium page every 30 minutes from 7 AM to 10 PM on weekdays
 # https://crontab.guru/#*/10_7-22_*_*_1-5
-*/10 7-22 * * 1-5 /home/pi/rpi-chrome-display/refresh-chromium.sh
+*/30 7-22 * * 1-5 /home/pi/rpi-chrome-display/refresh-chromium.sh
 
 # Wake up the screen at 6:55 AM on weekdays
 55 6 * * 1-5 /home/pi/rpi-chrome-display/monitor-on.sh
