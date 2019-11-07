@@ -1,5 +1,9 @@
-# Refresh Chromium page every 5 minutes on Monday through Friday
-# https://crontab.guru/#*/5_*_*_*_1-5
-*/5 * * * 1-5 /home/pi/rpi-chrome-display/refresh-chromium.sh
+# Refresh Chromium page every 10 minutes on Monday through Friday from 7 AM to 10 PM
+# https://crontab.guru/#*/10_7-22_*_*_1-5
+*/10 7-22 * * 1-5 /home/pi/rpi-chrome-display/refresh-chromium.sh
+
+# Turn on the screensaver at 10:30 PM every weekday
+# https://crontab.guru/#*/30_22_*_*_1-5
+30 22 * * 1-5 /home/pi/rpi-chrome-display/monitor-blank.sh
 
 # vim: set ft=crontab syntax=crontab:
