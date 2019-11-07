@@ -16,7 +16,7 @@ if grep -F 'start.sh' ~/.config/lxsession/LXDE-pi/autostart >/dev/null 2>&1; the
 	echo "  @$PWD/start.sh"
 	echo
 else
-	if [ -e "~/.config/lssession/LXDE-pi/autostart" ]; then
+	if [ -e "$HOME/.config/lssession/LXDE-pi/autostart" ]; then
 		echo 'Backing up ~/.config/lxsession/LXDE-pi/autostart file...'
 		cp ~/.config/lxsession/LXDE-pi/autostart ~/.config/lxsession/LXDE-pi/autostart.bak
 	fi
