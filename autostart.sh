@@ -4,8 +4,10 @@ xset s noblank
 xset s off
 # Disable energy star features
 xset -dpms
+# Unlock the Chromium profile in case it did not shutdown/unlock properly
+rm "$HOME/.config/chromium/Default/LOCK
 # Hide the banner to restore the previous Chromium browser session if there was an unexpected shutdown
 sed --in-place=bak -e 's/"exited_cleanly": \?false/"exited_cleanly":true/' -e 's/"exit_type": \?Crashed/"exit_type":"Normal"/' ~/.config/chromium/Default/Preferences
 # Start Chromium in kiosk mode
 url_to_open=$(cat "$HOME/rpi-chrome-display/url.txt")
-chromium-browser --noerrdialogs --kiosk ${url_to_open:-http://www.google.com/} --incognito
+chromium-browser --noerrdialogs --kiosk ${url_to_open:-http://www.google.com/}
