@@ -7,13 +7,13 @@ if ! ( dpkg -s xdotool >/dev/null 2>&1 || dpkg -s unclutter >/dev/null 2>&1 ); t
 	sudo apt update && sudo apt install xdotool unclutter -y
 fi
 
-# autostart
-if grep -F 'autostart.sh' ~/.config/lxsession/LXDE-pi/autostart >/dev/null 2>&1; then
+# start
+if grep -F 'start.sh' ~/.config/lxsession/LXDE-pi/autostart >/dev/null 2>&1; then
 	echo "Your ~/.config/lxsession/LXDE-pi/autostart file appears to already"
-	echo "contain the autostart.sh script from this project."
+	echo "contain the start.sh script from this project."
 	echo "Double-check your autostart file to ensure it includes the following line:"
 	echo
-	echo "  @$PWD/autostart.sh"
+	echo "  @$PWD/start.sh"
 	echo
 else
 	if [ -e "~/.config/lssession/LXDE-pi/autostart" ]; then
@@ -22,7 +22,7 @@ else
 	fi
 	mkdir -p ~/.config/lxsession/LXDE-pi
 	echo 'Modifying ~/.config/lxsession/LXDE-pi/autostart file...'
-	echo "@$PWD/autostart.sh" >> ~/.config/lxsession/LXDE-pi/autostart
+	echo "@$PWD/start.sh" >> ~/.config/lxsession/LXDE-pi/autostart
 fi
 
 # crontab
@@ -31,11 +31,11 @@ fi
 		echo "Double-check your crontab file by running 'crontab -e'"
 	else
 		if crontab -l >/dev/null 2>&1; then
-			echo "Appending autorefresh-chromium.cron to end of your crontab"
+			echo "Appending refresh-chromium.cron to end of your crontab"
 		else
-			echo "Creating your crontab file using autorefresh-chromium.cron"
+			echo "Creating your crontab file using refresh-chromium.cron"
 		fi
-		( crontab -l ; cat autorefresh-chromium.cron ) | crontab -
+		( crontab -l ; cat refresh-chromium.cron ) | crontab -
 	fi
 
 echo "Installed. Follow the other steps in this project's README file and then reboot the system."
