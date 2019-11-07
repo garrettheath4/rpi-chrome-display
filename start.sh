@@ -6,6 +6,10 @@ xset s noblank
 xset s off
 # Disable energy star features
 xset -dpms
+
+# Make sure the GUI is showing on the screen
+sudo chvt 9 && sudo chvt 7
+
 # Unlock the Chromium profile in case it did not shutdown/unlock properly
 rm "$HOME/.config/chromium/Singleton*"
 # Hide the banner to restore the previous Chromium browser session if there was an unexpected shutdown
