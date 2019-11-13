@@ -31,11 +31,11 @@ fi
 		echo "Double-check your crontab file by running 'crontab -e'"
 	else
 		if crontab -l >/dev/null 2>&1; then
-			echo "Appending refresh-chromium.cron to end of your crontab"
+			echo "Appending to end of your crontab"
 		else
-			echo "Creating your crontab file using refresh-chromium.cron"
+			echo "Creating your crontab file"
 		fi
-		( crontab -l ; cat refresh-chromium.cron ) | crontab -
+		( crontab -l ; cat crontab ) | crontab -
 	fi
 
 echo "Installed. Follow the other steps in this project's README file and then reboot the system."
