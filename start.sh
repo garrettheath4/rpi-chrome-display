@@ -19,7 +19,7 @@ sed --in-place=.bak -e 's/"exited_cleanly": \?false/"exited_cleanly":true/' -e '
 url_to_open=$(cat "$HOME/rpi-chrome-display/url.txt")
 
 # Start Chromium in kiosk mode in a background process
-DISPLAY=:0.0 chromium-browser --noerrdialogs --kiosk "${url_to_open:-http://www.google.com/}" &
+DISPLAY=':0.0' chromium-browser --noerrdialogs --kiosk "${url_to_open:-http://www.google.com/}" &
 
 # Wait for the login page to load and press Enter
 sleep 30 && "$HOME/rpi-chrome-display/press-enter.sh"
