@@ -6,7 +6,7 @@
 55 6 * * 1-5 /home/pi/rpi-chrome-display/monitor-on.sh
 
 # Log in to the UI at 7:02 AM on weekdays
-02 7 * * 1-5 /home/pi/rpi-chrome-display/press-enter.sh && /home/pi/rpi-chrome-display/press-tab-14-enter.sh
+02 7 * * 1-5 /home/pi/rpi-chrome-display/fusion-login-to-wizard.sh
 
 # Turn on the screensaver at 10:30 PM every weekday
 # https://crontab.guru/#*/30_22_*_*_1-5
