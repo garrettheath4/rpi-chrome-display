@@ -1,12 +1,14 @@
-# Refresh Chromium page every 30 minutes from 7 AM to 10 PM on weekdays
-# https://crontab.guru/#*/10_7-22_*_*_1-5
-*/30 7-22 * * 1-5 /home/pi/rpi-chrome-display/refresh-chromium.sh
-
 # Wake up the screen at 6:55 AM on weekdays
+# https://crontab.guru/#55_6_*_*_1-5
 55 6 * * 1-5 /home/pi/rpi-chrome-display/monitor-on.sh
 
-# Log in to the UI at 7:02 AM on weekdays
-02 7 * * 1-5 /home/pi/rpi-chrome-display/fusion-login-to-wizard.sh
+# Refresh Chromium page at 10:00 AM on weekdays
+# https://crontab.guru/#00_10_*_*_1-5
+00 10 * * 1-5 /home/pi/rpi-chrome-display/refresh-chromium.sh
+
+# Log in to the UI at 10:02 AM on weekdays
+# https://crontab.guru/#02_10_*_*_1-5
+02 10 * * 1-5 /home/pi/rpi-chrome-display/fusion-login-to-wizard.sh
 
 # Turn on the screensaver at 10:30 PM every weekday
 # https://crontab.guru/#*/30_22_*_*_1-5
