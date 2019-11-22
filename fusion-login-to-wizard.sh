@@ -7,4 +7,4 @@ cd "$( dirname "${BASH_SOURCE[0]}" )" || exit
 
 sleep 30
 
-./press-tab-14-enter.sh
+./press-tab-13-enter.sh

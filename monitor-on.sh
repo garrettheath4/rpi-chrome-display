@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export DISPLAY=':0.0'
+
 xset -dpms
 sleep 2
 tvservice -p

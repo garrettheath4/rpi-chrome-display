@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-num_tabs=14
+num_tabs=13
 
 export DISPLAY=':0.0'
 
