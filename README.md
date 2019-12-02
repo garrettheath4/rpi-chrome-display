@@ -31,6 +31,10 @@ Instructions
 1. Application Menu > Preferences > Raspberry Pi Configuration
     * Check _Login as user 'pi'_
     * Set resolution to 720p or 1080p (CEA mode, for TVs)
+1. Disable autologin on tty1 while leaving it enabled in GUI by running:
+
+        sudo systemctl disable getty@tty1.service
+
 1. Clone this repository to the home directory of the `pi` user:
 
         git clone https://github.com/garrettheath4/rpi-chrome-display.git

@@ -2,6 +2,7 @@
 # Run this script to install rpi-chrome-display to this computer (Raspberry Pi)
 # See README.md file in rpi-chrome-display project for more instructions
 
+# apt installs
 if ! ( dpkg -s xdotool >/dev/null 2>&1 || dpkg -s unclutter >/dev/null 2>&1 ); then
 	echo 'Installing xdotool and unclutter...'
 	sudo apt update && sudo apt install xdotool unclutter -y
