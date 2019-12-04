@@ -4,7 +4,3 @@
 cd "$( dirname "${BASH_SOURCE[0]}" )" || exit
 
 ./press-enter.sh
-
-sleep 30
-
-./press-tab-13-enter.sh

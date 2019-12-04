@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
+# shellcheck disable=SC1091
+source utils.sh
+
 num_tabs=13
 
 export DISPLAY=':0.0'
 
-for ((i=0; i<num_tabs; i++)); do
-	xdotool key Tab
-done
+tab $num_tabs
 
 xdotool key Return
