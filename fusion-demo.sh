@@ -42,3 +42,8 @@ sleep $wait_between_steps
 
 tab 14  # to Next button
 ./press-enter.sh
+
+sleep $wait_between_steps
+
+tab 11
+xdotool key space  # show filetype dropdown menu
