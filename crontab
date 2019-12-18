@@ -11,5 +11,5 @@
 02 10 * * 1-5 /home/pi/rpi-chrome-display/fusion-login-to-wizard.sh
 
 # Turn on the screensaver at 10:30 PM every weekday
-# https://crontab.guru/#*/30_22_*_*_1-5
-30 22 * * 1-5 /home/pi/rpi-chrome-display/monitor-blank.sh
+# https://crontab.guru/#59_23_*_*_1-5
+59 23 * * 1-5 /home/pi/rpi-chrome-display/monitor-blank.sh
